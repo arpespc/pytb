@@ -1,0 +1,9 @@
+# site 1                   site2                       hopping energy     wann1          wann2
+# hopping from siet1's wann1 to stie2's wann2
+0   0   0        0   0   0            0.0            0   0
+0   0   0        0   0   1            2.0            0   0
+0   0   0        0   1   0            2.0            0   0
+0   0   0        1   0   0            2.0            0   0
+0   0   0        0   0  -1            2.0            0   0
+0   0   0        0  -1   0            2.0            0   0
+0   0   0       -1   0   0            2.0            0   0
