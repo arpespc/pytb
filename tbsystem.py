@@ -80,8 +80,12 @@ class tbsystem():
             j = int(hopping[-1])
             phase_factor = np.exp(I*np.dot(k, delta_r))
             t = hopping[2*dim]
-            Ham[j, i] += t*phase_factor
-        return Ham + Ham.conj().transpose() # np.conj(Ham.transpose())
+            Ham[i, j] += t*phase_factor
+        
+        Ham = Ham + Ham.conj().transpose()
+        for i in range(num_wann):
+            Ham[i, i] = Ham[i, i] / 2.0  # in the U + U.h formation, the diagonal term is sumed twice time
+        return Ham # np.conj(Ham.transpose())
 
     def bands(self):
         """
