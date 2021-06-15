@@ -71,7 +71,7 @@ class tbsystem():
         num_wann = self.num_wann
         hopping_dates_cart = self.tbdata
         dim = self.dim
-        Ham = np.zeros((num_wann, num_wann), dtype=np.complex)
+        Ham = np.zeros((num_wann, num_wann), dtype=complex)
         for hopping in hopping_dates_cart:
             site1_cart = hopping[0:dim]
             site2_cart = hopping[dim:2*dim]
