@@ -78,7 +78,7 @@ class tbsystem():
             delta_r = site2_cart - site1_cart
             i = int(hopping[-2])
             j = int(hopping[-1])
-            phase_factor = np.exp(-I*np.dot(k, delta_r))
+            phase_factor = np.exp(I*np.dot(k, delta_r))
             t = hopping[2*dim]
             Ham[j, i] += t*phase_factor
         return Ham + Ham.conj().transpose() # np.conj(Ham.transpose())
